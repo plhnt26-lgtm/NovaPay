@@ -124,3 +124,38 @@ async function checkLogin() {
     return data.session;
 
         }
+// ===============================
+// Load Dashboard
+// ===============================
+
+async function loadDashboard() {
+
+    const { data: sessionData } = await supabase.auth.getSession();
+
+    if (!sessionData.session) {
+        window.location.href = "login.html";
+        return;
+    }
+
+    const user = sessionData.session.user;
+
+    const { data, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+
+    if (error) {
+        alert(error.message);
+        return;
+    }
+
+    document.getElementById("userName").innerText = data.full_name;
+    document.getElementById("balance").innerText = "$" + Number(data.balance).toFixed(2);
+
+}
+
+// បើកតែនៅ Dashboard
+if (window.location.pathname.includes("dashboard.html")) {
+    loadDashboard();
+}
