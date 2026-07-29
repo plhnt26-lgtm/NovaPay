@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaPay | Register</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="logo">
+Nova<span>Pay</span>
+</h1>
+
+<p class="subtitle">
+Create Your Account
+</p>
+
+<div class="card">
+
+<div class="input-group">
+<label>Full Name</label>
+<input
+id="fullname"
+class="input"
+type="text"
+placeholder="Full Name">
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input
+id="email"
+class="input"
+type="email"
+placeholder="Email">
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input
+id="password"
+class="input"
+type="password"
+placeholder="Password">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input
+id="confirmPassword"
+class="input"
+type="password"
+placeholder="Confirm Password">
+</div>
+
+<div class="input-group">
+<label>Referral Code (Optional)</label>
+<input
+id="referral"
+class="input"
+type="text"
+placeholder="Referral Code">
+</div>
+
+<button
+class="btn"
+onclick="register()">
+Register
+</button>
+
+<div class="small">
+
+Already have an account?
+
+<a href="login.html">
+Login
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
