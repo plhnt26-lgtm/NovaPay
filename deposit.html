@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaPay | Deposit</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="logo">
+Nova<span>Pay</span>
+</h1>
+
+<p class="subtitle">
+Deposit Funds
+</p>
+
+<div class="card">
+
+<div class="input-group">
+
+<label>Amount ($)</label>
+
+<input
+id="depositAmount"
+class="input"
+type="number"
+placeholder="Enter amount">
+
+</div>
+
+<button
+class="btn"
+onclick="deposit()">
+
+Submit Deposit
+
+</button>
+
+<button
+class="btn mt20"
+onclick="location.href='dashboard.html'">
+
+Back Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+  </html>
