@@ -131,3 +131,4 @@ async function loadDashboard() {
 if (window.location.pathname.includes("dashboard.html")) {
     loadDashboard();
 }
+alert("script.js loaded");
